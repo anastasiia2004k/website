@@ -1,0 +1,432 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 1200px)
+  { .container {
+   padding: auto;
+   }
+}
+
+  .button {
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #f32b08;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 14px;
+    text-decoration: none;
+    border: none;
+    margin-top: 20px;
+  }
+
+  .button:hover {
+    background-color: #918a89;
+    transition: 0.3s;
+  }
+  .button:focus {
+    background-color: #b03735;
+    transition: 0.3s;
+  }
+  
+  .button-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+  /* HEADER */
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 200px;
+    background-image: url("./pexels-drmakete-lab-48828.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  @media (max-width: 1200px)
+  { .hero {
+   padding-left: 20px;
+   padding-right: 20px;
+   }
+}
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (max-width: 1200px)
+  { .nav {
+   left: 0;
+   box-sizing: border-box;
+   padding-left: 20px;
+   padding-right: 20px;
+   }
+}
+  
+  .menu {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  @media (max-width: 560px){
+     .menu {
+   position: fixed;
+   top:0;
+   left: 0;
+   margin: 0;
+   width: 100%;
+   height: 100vh;
+   background-color: antiquewhite;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   display: none;
+}
+.menu-open{
+    display: flex;
+  }
+  }
+
+.menu-button ,
+.menu-close-button{
+    background: transparent;
+    border: none;
+}
+.menu-close-button{
+    position: fixed;
+    top: 8px;
+    right: 24px;
+    z-index: 1;
+    display: none;
+}
+@media(max-width: 560px){
+    .menu-button,
+    .menu-close-button{
+        display: none;
+    }
+}
+  
+  .menu-link {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .menu-link:hover {
+    color: #444;
+    transition: 300ms;
+  }
+  
+  .main-heading {
+    padding-top: 70px;
+    font-size: 64px;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .header-text {
+    max-width: 600px;
+    font-size: 22px;
+    line-height: 32px;
+  }
+  /* ABOUT SECTION */
+  .section-about {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  @media (max-width: 960px) {
+    .section-about {flex-direction: column;
+        align-items: center;
+    }
+  }
+
+  .about-content {
+    max-width: 400px;
+  }
+  .about-heading {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+  }
+  .about-image-wrapper {
+    max-width: 400px;
+    position: relative;
+  }
+  @media (max-width: 420px) {
+    .about-image-wrapper {
+      max-width: 300px;
+    }
+  }
+  .about-image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border: 10px solid #c4ad9b;
+    border-radius: 8px;
+    z-index: -1;
+  }
+
+  .about-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 100%;
+    height: 100%;
+    background: #625642;
+    border-radius: 8px;
+    z-index: -1;
+  }
+  
+  .about-image {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+  
+  /* HOBBY SECTION */
+  .hobby-name {
+    font-size: 28px;
+    font-weight: semibold;
+    color: white;
+  }
+  
+  .hobby-list {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+  } 
+   
+@media (max-width: 1000px) {
+    .hobby-list {
+      flex-direction: column;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+  @media (max-width: 460px) {
+    .hobby-list {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+}
+
+  .hobby-item {
+    text-align: center;
+  }
+  
+  .hobby-text {
+    font-size: 20px;
+    color: white;
+  }
+  .hobby-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  
+  .section-hobby {
+    background-color: #a57f60;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  /* PHOTOS SECTION */
+  .section-photos {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+ 
+
+  .photos {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .photos-text {
+    font-size: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .photos-heading {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+  }
+  
+  .photos-description {
+    font-size: 20px;
+  }
+
+  .figure {
+    max-width: 30%;
+    margin: 0;
+  }
+  @media (max-width: 800px)
+   { .figure {
+    max-width: 45%;
+    }
+}
+@media (max-width: 460px)
+{ .figure {
+ max-width: 100%;
+ }
+}
+  
+  .figure-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .figure-description {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* QUOTE SECTION */
+  .section-quote {
+    padding: 100px;
+    background-color: #e3a587;
+  }
+
+  .quote-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .quote-icon {
+    font-size: 120px;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .quote {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .quote-author {
+    display: block;
+    font-size: 20px;
+    text-align: right;
+  }
+  
+  /* CONTACT */
+  .section-contact {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px;
+  }
+  
+  .contact-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e3a587;
+    border-radius: 4px;
+  }
+  
+  .input:focus {
+    border: 1px solid #b04835;
+    outline: none;
+  }
+
+  .textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e3a587;
+    border-radius: 4px;
+  }
+  
+  .textarea:focus {
+    border: 1px solid #b04835;
+    outline: none;
+  }
+  
+  /* FOOTER */
+  .footer {
+    padding: 80px;
+    background-color: #a57f60;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (max-width: 580px)
+  { .footer-content {
+   flex-direction: column;
+   }
+}
+  .footer-link {
+    color: rgb(224, 46, 46);
+  }
+  
+  .social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
